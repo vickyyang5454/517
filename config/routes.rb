@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :users
   
   resources :course_orders
-  root to: "admins#index"
+  root to: "home#index"
   resources :creditcards
   resources :feedbacks
   resources :teachments
