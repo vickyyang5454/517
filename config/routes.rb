@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  
   resources :course_orders
+  root to: "admins#index"
   resources :creditcards
   resources :feedbacks
   resources :teachments

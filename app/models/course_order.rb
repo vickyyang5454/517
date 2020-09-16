@@ -4,5 +4,6 @@ class CourseOrder < ApplicationRecord
 	
 	validates :student, presence: true
 	validates :teacher, presence: true
-	validates :states, presence: true, inclusion: {  in:  %w(in_progress  Complete),message: "%{value} is not a valid state" }
+	validates :states, presence: true, inclusion: {  in:  %w(in_progress  Complete),
+    	message: "%{value} is not a valid state" }
 end

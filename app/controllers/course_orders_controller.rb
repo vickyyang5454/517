@@ -69,6 +69,6 @@ class CourseOrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_order_params
-      params.require(:course_order).permit(:)
+      params.require(:course_order).permit(:status)
     end
 end

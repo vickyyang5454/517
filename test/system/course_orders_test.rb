@@ -14,7 +14,7 @@ class CourseOrdersTest < ApplicationSystemTestCase
     visit course_orders_url
     click_on "New Course Order"
 
-    fill_in "", with: @course_order.
+    fill_in "Status", with: @course_order.status
     click_on "Create Course order"
 
     assert_text "Course order was successfully created"
@@ -25,7 +25,7 @@ class CourseOrdersTest < ApplicationSystemTestCase
     visit course_orders_url
     click_on "Edit", match: :first
 
-    fill_in "", with: @course_order.
+    fill_in "Status", with: @course_order.status
     click_on "Update Course order"
 
     assert_text "Course order was successfully updated"
